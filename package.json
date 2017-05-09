@@ -13,6 +13,10 @@
     "Sebastian Kippe <sebastian@kip.pe>"
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/67P/remotestorage-module-chat-messages.git"
+  },
   "devDependencies": {
     "babel-core": "^6.18.2",
     "babel-loader": "^6.2.7",

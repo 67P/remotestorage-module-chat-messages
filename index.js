@@ -360,7 +360,7 @@
      * Updates and writes an existing archive document
      */
     _updateDocument: function(archive, messages) {
-      RemoteStorage.log('[chat-messages] Updating archive document', archive);
+      console.debug('[chat-messages] Updating archive document', archive);
 
       if (Array.isArray(messages)) {
         messages.forEach(function(message) {
@@ -379,7 +379,7 @@
      * Creates and writes a new archive document
      */
     _createDocument: function(messages) {
-      RemoteStorage.log('[chat-messages] Creating new archive document');
+      console.debug('[chat-messages] Creating new archive document');
       let archive = this._buildArchiveObject();
 
       if (Array.isArray(messages)) {
@@ -454,11 +454,11 @@
           let path = this.path.substring(0, this.path.length-this.dateId.length)+archive.today['@id'];
 
           return this.client.storeObject('daily-archive', path, archive).then(() => {
-            RemoteStorage.log('[chat-messages] Previous archive written to remote storage', path, archive);
+            console.debug('[chat-messages] Previous archive written to remote storage', path, archive);
             return archive;
           });
         } else {
-          RemoteStorage.log('[chat-messages] Previous archive not found');
+          console.debug('[chat-messages] Previous archive not found');
           return false;
         }
       });
@@ -534,13 +534,13 @@
      * Write archive document
      */
     _sync: function(obj) {
-      RemoteStorage.log('[chat-messages] Writing archive object', obj);
+      console.debug('[chat-messages] Writing archive object', obj);
 
       return this.client.storeObject('daily-archive', this.path, obj).then(function(){
-        RemoteStorage.log('[chat-messages] Archive written to remote storage');
+        console.debug('[chat-messages] Archive written to remote storage');
         return true;
       },function(error){
-        console.log('[chat-messages] Error trying to store object', error);
+        console.warn('[chat-messages] Error trying to store object', error);
         return error;
       });
     }

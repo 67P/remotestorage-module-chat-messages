@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack -w",
-    "build": "NODE_ENV=production webpack"
+    "build": "NODE_ENV=production webpack -p",
+    "version": "npm run build && git add dist/"
   },
   "author": "Kosmos Developers <mail@kosmos.org> (https://kosmos.org)",
   "contributors": [

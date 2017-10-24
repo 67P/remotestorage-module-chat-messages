@@ -1,6 +1,4 @@
-var RemoteStorage = require('remotestoragejs');
-
-RemoteStorage.defineModule("chat-messages", function (privateClient, publicClient) {
+ var ChatMessages = function (privateClient, publicClient) {
 
   /**
    * Schema: chat-messages/daily
@@ -570,4 +568,7 @@ RemoteStorage.defineModule("chat-messages", function (privateClient, publicClien
 
   // Return public functions
   return { exports: exports };
-});
+
+};
+
+export default { name: 'chat-messages', builder: ChatMessages };

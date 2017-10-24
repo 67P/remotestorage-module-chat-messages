@@ -1,6 +1,6 @@
 {
   "name": "remotestorage-module-chat-messages",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Stores chat messages in daily archive files",
   "main": "./dist/build.js",
   "scripts": {

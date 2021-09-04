@@ -9,10 +9,7 @@
     "build": "NODE_ENV=production webpack -p",
     "version": "npm run build && git add dist/"
   },
-  "author": "Kosmos Developers <mail@kosmos.org> (https://kosmos.org)",
-  "contributors": [
-    "Sebastian Kippe <sebastian@kip.pe>"
-  ],
+  "author": "Kosmos Contributors <mail@kosmos.org> (https://kosmos.org)",
   "license": "MIT",
   "repository": {
     "type": "git",
